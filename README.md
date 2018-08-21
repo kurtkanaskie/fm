@@ -1,2 +1,2 @@
-# fm
-Multiple API proxies, shared flows in single repository
+# fm-oauth-v1
+OAuth proxy
