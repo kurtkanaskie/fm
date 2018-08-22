@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF-AccountLocked">
+    <DisplayName>RF-AccountLocked</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="text/plain">Invalid Credentials, Too Many Incorrect Attempts, AccountLocked</Payload>
+            <StatusCode>401</StatusCode>
+            <ReasonPhrase>RF-AccountLocked</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

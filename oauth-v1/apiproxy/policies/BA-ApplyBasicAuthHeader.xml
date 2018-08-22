@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication name="BA-ApplyBasicAuthHeader">
+    <DisplayName>BA-ApplyBasicAuthHeader</DisplayName>
+    <Operation>Encode</Operation>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <User ref="request.formparam.username"/>
+    <Password ref="request.formparam.password"/>
+    <AssignTo createNew="true">tam_creds</AssignTo>
+</BasicAuthentication>

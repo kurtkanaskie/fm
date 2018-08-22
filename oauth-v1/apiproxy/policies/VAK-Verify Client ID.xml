@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyAPIKey async="false" continueOnError="false" enabled="true" name="VAK-Verify Client ID">
+    <DisplayName>VAK-Verify Client ID</DisplayName>
+    <APIKey ref="request.formparam.client_id"/>
+</VerifyAPIKey>

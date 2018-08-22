@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-oauth-v1" mapIdentifier="oauth-v1">
+    <DisplayName>oauth-v1</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <!-- 1 day -->
+    <ExpiryTimeInSecs>86400</ExpiryTimeInSecs>
+    <Get assignTo="tam_url">
+        <Key>
+            <Parameter>tam_url</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

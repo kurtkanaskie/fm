@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="true" enabled="true" name="SC-TAMCallout">
+    <DisplayName>SC-TAMCallout</DisplayName>
+    <Properties/>
+    <Request>
+        <Set>
+            <Headers>
+                <Header name="Authorization">{tam_creds}</Header>
+            </Headers>
+        </Set>
+    </Request>
+    <Response>calloutResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://{tam_url}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

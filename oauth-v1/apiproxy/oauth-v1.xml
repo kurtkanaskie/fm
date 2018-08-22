@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="21" name="OAUTH-V1">
+    <Basepaths>/oauth-v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1532008887272</CreatedAt>
+    <CreatedBy>dhundi_acharya@freddiemac.com</CreatedBy>
+    <Description>Working properly with error handler, added error handler for Unathorized and Account Locked</Description>
+    <DisplayName>OAUTH-V1</DisplayName>
+    <LastModifiedAt>1534787087615</LastModifiedAt>
+    <LastModifiedBy>dhundi_acharya@freddiemac.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:e7ba54bba7df2a3e50de609cfffb4fab0e1c34cb2386f22c3eaf29d4200a943b29ee743662f3c88a275798ae3c45cf59686109cf9ee2a4f0d285cd926cd30f78</ManifestVersion>
+    <Policies>
+        <Policy>AM-SetContent-Type</Policy>
+        <Policy>BA-ApplyBasicAuthHeader</Policy>
+        <Policy>FC-DefaultErrorMessage</Policy>
+        <Policy>JSON-to-XML</Policy>
+        <Policy>KV-oauth-v1</Policy>
+        <Policy>OA-GenerateAccessToken</Policy>
+        <Policy>RF-AccountLocked</Policy>
+        <Policy>RF-InvalidCredentials</Policy>
+        <Policy>RF-path-suffix-not-found</Policy>
+        <Policy>SC-TAMCallout</Policy>
+        <Policy>VAK-Verify Client ID</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

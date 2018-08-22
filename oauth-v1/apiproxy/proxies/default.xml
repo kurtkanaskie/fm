@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <DefaultFaultRule name="all">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>FC-DefaultErrorMessage</Name>
+        </Step>
+    </DefaultFaultRule>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="/generateToken">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>VAK-Verify Client ID</Name>
+                </Step>
+                <Step>
+                    <Name>BA-ApplyBasicAuthHeader</Name>
+                </Step>
+                <Step>
+                    <Name>KV-oauth-v1</Name>
+                </Step>
+                <Step>
+                    <Name>SC-TAMCallout</Name>
+                </Step>
+                <Step>
+                    <Condition>ServiceCallout.response  Matches "*Account Locked*"  AND tam_creds != null </Condition>
+                    <Name>RF-AccountLocked</Name>
+                </Step>
+                <Step>
+                    <Condition>calloutResponse.status.code != 200 AND tam_creds != null </Condition>
+                    <Name>RF-InvalidCredentials</Name>
+                </Step>
+                <Step>
+                    <Name>OA-GenerateAccessToken</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Condition>oauthV2.failed == true</Condition>
+                    <Name>RF-OAuthFailed</Name>
+                </Step>
+                <Step>
+                    <Condition>(request.header.accept == "application/xml")</Condition>
+                    <Name>JSON-to-XML</Name>
+                </Step>
+                <Step>
+                    <Condition>(request.header.accept == "application/xml")</Condition>
+                    <Name>AM-SetContent-Type</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/token") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="UnknownRequest">
+            <Request>
+                <Step>
+                    <Name>RF-path-suffix-not-found</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/oauth-v1</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>
