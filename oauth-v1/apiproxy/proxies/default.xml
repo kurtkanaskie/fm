@@ -26,7 +26,7 @@
                     <Name>BA-ApplyBasicAuthHeader</Name>
                 </Step>
                 <Step>
-                    <Name>KV-oauth-v1</Name>
+                    <Name>KV-Configuration</Name>
                 </Step>
                 <Step>
                     <Name>SC-TAMCallout</Name>

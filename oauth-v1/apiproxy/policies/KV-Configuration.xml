@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-oauth-v1" mapIdentifier="oauth-v1">
-    <DisplayName>oauth-v1</DisplayName>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-Configuration" mapIdentifier="oauth-v1">
+    <DisplayName>KV-Configuration</DisplayName>
     <Properties/>
     <ExclusiveCache>false</ExclusiveCache>
     <!-- 1 day -->
