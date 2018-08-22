@@ -1,7 +1,7 @@
 {
     "apiconfig": {
         "domain": "API_NORTHBOUND_DOMAIN",
-        "basepath": "/oauth-v1",
+        "basepath": "/oauth/v1",
         "apiproxy": "oauth-v1",
 		"userUsername" : "REPLACE-USERNAME",
         "userPassword" : "REPLACE-PASSWORD",

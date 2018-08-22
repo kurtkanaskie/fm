@@ -69,7 +69,7 @@
         </Flow>
     </Flows>
     <HTTPProxyConnection>
-        <BasePath>/oauth-v1</BasePath>
+        <BasePath>/oauth/v1</BasePath>
         <Properties/>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>

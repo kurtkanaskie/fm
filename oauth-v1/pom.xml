@@ -209,8 +209,8 @@
 						</replacement>
 						<!-- basepath -->
 						<replacement>
-							<token>/oauth-v1</token>
-							<value>/oauth-${deployment.suffix}v1</value>
+							<token>/oauth/v1</token>
+							<value>/oauth/${deployment.suffix}v1</value>
 						</replacement>
 						<!-- test-config.json -->
 						<replacement>
