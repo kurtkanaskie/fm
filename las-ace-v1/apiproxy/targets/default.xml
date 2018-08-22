@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="getDecisionUsingPOST">
+            <Description>Verify if a Property is Freddie Mac ACE Eligible</Description>
+            <Request>
+                <Step>
+                    <Name>AM-SetDecisionsPathSuffix</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/ace/evaluation") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPTargetConnection>
+        <LoadBalancer>
+            <Server name="las-ace-v1"/>
+        </LoadBalancer>
+        <SSLInfo>
+            <Enabled>true</Enabled>
+        </SSLInfo>
+        <Path>{targetbasepath}/{targetpathsuffix}</Path>
+        <Properties/>
+        <!-- <URL>https://ewssit.fmrei.com:6000/las-ace-api</URL> -->
+    </HTTPTargetConnection>
+</TargetEndpoint>

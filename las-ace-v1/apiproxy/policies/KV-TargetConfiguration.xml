@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations mapIdentifier="las-ace-v1" continueOnError="false" enabled="true" name="KV-TargetConfiguration">
+    <DisplayName>KV-TargetConfiguration</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <!-- 1 day -->
+    <ExpiryTimeInSecs>86400</ExpiryTimeInSecs>
+    <Get assignTo="targetbasepath" index="1">
+        <Key>
+            <Parameter>targetbasepath</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>
