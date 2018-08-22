@@ -194,6 +194,7 @@
 						<include>test/integration/test-config.json</include>
 						<include>resources/edge/org/apiProducts.json</include>
 						<include>resources/edge/org/developerApps.json</include>
+						<include>resources/edge/org/developers.json</include>
 						<!--<include>test/performance/testdata.csv</include>-->
 					</includes>
 					<replacements>

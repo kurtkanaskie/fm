@@ -1,0 +1,12 @@
+[
+    {
+        "name": "las-ace-v1",
+        "encrypted": false,
+        "entry": [
+            {
+                "name": "targetbasepath",
+                "value": "las-ace-api"
+            }
+        ]
+    }
+]

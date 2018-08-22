@@ -1,0 +1,15 @@
+[
+    {
+        "name": "las-ace-v1",
+        "host": "ewssit.fmrei.com",
+        "isEnabled": true,
+        "port": 6000,
+        "sSLInfo": {
+            "ciphers": [],
+            "clientAuthEnabled": "false",
+            "enabled": "true",
+            "ignoreValidationErrors": false,
+            "protocols": []
+        }
+    }
+]

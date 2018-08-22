@@ -1,0 +1,12 @@
+[
+    {
+        "name": "oauth-v1",
+        "encrypted": false,
+        "entry": [
+            {
+                "name": "tam_url",
+                "value": "np.fmrei.com"
+            }
+        ]
+    }
+]
