@@ -20,9 +20,9 @@
         "proxies": [
             "oauth-v1"
         ],
-        "quota": "10000",
+        "quota": "30",
         "quotaInterval": "1",
-        "quotaTimeUnit": "month",
+        "quotaTimeUnit": "minute",
         "scopes": []
     }
 ]
