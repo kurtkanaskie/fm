@@ -16,11 +16,21 @@
             <Description>Verify if a Property is Freddie Mac ACE Eligible</Description>
             <Request>
                 <Step>
-                    <Name>AM-SetDecisionsPathSuffix</Name>
+                    <Name>AM-SetPathSuffixDecisions</Name>
                 </Step>
             </Request>
             <Response/>
             <Condition>(proxy.pathsuffix MatchesPath "/ace/evaluation") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="handleUsingGET">
+            <Description>handle</Description>
+            <Request>
+                <Step>
+                    <Name>AM-SetPathSuffixActuatorHealth</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
         </Flow>
     </Flows>
     <HTTPTargetConnection>
