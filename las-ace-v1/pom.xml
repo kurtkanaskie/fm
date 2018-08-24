@@ -49,7 +49,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>single-family-non-prod-dev.apigee.net</api.northbound.domain>
-				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
+				<api.testtag>@intg,@health,@wip,@mock</api.testtag>
 				<oauth.domain>single-family-non-prod-dev.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
 				<user.username>baofam_lasapisys2sys</user.username>
@@ -67,7 +67,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>single-family-non-prod-sit.apigee.net</api.northbound.domain>
-				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
+				<api.testtag>@intg,@health</api.testtag>
 				<oauth.domain>single-family-non-prod-sit.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
 				<user.username>baofam_lasapisys2sys</user.username>
@@ -85,7 +85,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>kurtkanaskietrainer-trial-test.apigee.net</api.northbound.domain>
-				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
+				<api.testtag>@intg,@health,@wip,@mock</api.testtag>
 				<oauth.domain>kurtkanaskietrainer-trial-test.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
 				<user.username>baofam_lasapisys2sys</user.username>
@@ -103,7 +103,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>kurtkanaskietrainer-trial-prod.apigee.net</api.northbound.domain>
-				<api.testtag>~@health</api.testtag>
+				<api.testtag>@intg,@health</api.testtag>
 				<oauth.domain>kurtkanaskietrainer-trial-test.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
 				<user.username>baofam_lasapisys2sys</user.username>
@@ -458,6 +458,7 @@
 				<version>2.5</version>
 
 				<executions>
+					<!-- Dont clean so process-resources works without needing to download appKeys every time
 					<execution>
 						<id>auto-clean-init</id>
 						<phase>initialize</phase>
@@ -465,6 +466,7 @@
 							<goal>clean</goal>
 						</goals>
 					</execution>
+					-->
 					<!-- leave the target dir for debugging, post mortem -->
 					<!-- 
 					<execution>

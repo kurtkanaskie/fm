@@ -25,7 +25,7 @@
         <Request/>
         <Response>
             <Step>
-                <Name>AM-RemoveHeaders</Name>
+                <Name>AM-CleanResponse</Name>
             </Step>
             <Step>
                 <Name>FC-CommonApigeeLoggerPostFlow</Name>
@@ -50,7 +50,7 @@
             <Description>handle</Description>
             <Request/>
             <Response/>
-            <Condition>(proxy.pathsuffix MatchesPath "/actuator/health") and (request.verb = "GET")</Condition>
+            <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
         </Flow>
         <Flow name="UnknownRequest">
             <Request>

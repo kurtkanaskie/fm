@@ -7,8 +7,8 @@ Feature: API proxy health
 	@get-health-password
     Scenario: Verify the backend service is responding
         Given I have a valid password access token
-		When I GET /actuator/health
+		When I GET /status
         Then response code should be 200
         And response header Content-Type should be application/json
-        And response body should contain OK
+        And response body should contain "status":"UP"
         

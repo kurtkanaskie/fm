@@ -117,3 +117,4 @@ Replacer copies and replaces the resources dir into the target. Note use of -Dap
 
 #### Run tests after process-resources
 * node ./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags @errors
+mvn -P fm-dev process-resources -Ddeployment.suffix= -Dapigee.config.exportDir=target/test/integration exec:exec@integration -Dapi.testtag=@health
