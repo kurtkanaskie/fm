@@ -1,7 +1,7 @@
 {
     "apiconfig": {
         "domain": "API_NORTHBOUND_DOMAIN",
-        "basepath": "/las-ace-v1",
+        "basepath": "/las-ace/v1",
         "apiproxy": "las-ace-v1",
 		"oauthDomain": "OAUTH_DOMAIN",
         "oauthBasepath": "OAUTH_BASEPATH",

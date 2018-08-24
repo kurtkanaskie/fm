@@ -62,7 +62,7 @@
         </Flow>
     </Flows>
     <HTTPProxyConnection>
-        <BasePath>/las-ace-v1</BasePath>
+        <BasePath>/las-ace/v1</BasePath>
         <Properties/>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>

@@ -218,8 +218,8 @@
 						</replacement>
 						<!-- basepath -->
 						<replacement>
-							<token>/las-ace-v1</token>
-							<value>/las-ace-${deployment.suffix}v1</value>
+							<token>/las-ace/v1</token>
+							<value>/las-ace/${deployment.suffix}v1</value>
 						</replacement>
 						<!-- test-config.json -->
 						<replacement>
