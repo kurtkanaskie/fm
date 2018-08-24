@@ -398,77 +398,22 @@
 				</executions>
 			</plugin>
 
-			<!-- run performance tests -->
-			<!--
-			<plugin>
-				<groupId>com.lazerycode.jmeter</groupId>
-				<artifactId>jmeter-maven-plugin</artifactId>
-				<version>2.2.0</version>
-				<executions>
-					<execution>
-						<id>jmeter-tests</id>
-						<phase>install</phase>
-						<goals>
-							<goal>jmeter</goal>
-						</goals>
-						<configuration>
-							<skipTests>${skipPerformanceTests}</skipTests>
-							<ignoreResultFailures>true</ignoreResultFailures>
-							<suppressJMeterOutput>false</suppressJMeterOutput>
-							<propertiesUser>
-								<testData>testdata.csv</testData>
-								<threadNum>10</threadNum>
-								<rampUpPeriodSecs>2</rampUpPeriodSecs>
-								<loopCount>10</loopCount>
-							</propertiesUser>
-						</configuration>
-					</execution>
-				</executions>
-				<configuration>
-					<testFilesDirectory>target/test/performance</testFilesDirectory>
-					<testResultsTimestamp>false</testResultsTimestamp>
-					<resultsDirectory>${project.root.dir}/results/performance</resultsDirectory>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>com.lazerycode.jmeter</groupId>
-				<artifactId>jmeter-analysis-maven-plugin</artifactId>
-				<version>1.0.6</version>
-				<executions>
-					<execution>
-						<id>jmeter-analysis</id>
-						<phase>install</phase>
-						<goals>
-							<goal>analyze</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<sourceDirFailed>false</sourceDirFailed>
-					<source>${project.root.dir}/results/performance/*</source>
-					<targetDirectory>${project.root.dir}/results/performance/reports</targetDirectory>
-				</configuration>
-			</plugin>
-			-->
-
 			<!-- cleaning dirs -->
 			<plugin>
+				<!-- to skip, use -Dskip.clean=true -->
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>2.5</version>
-
+				<configuration>
+					<skip>${skip.clean}</skip>
+				</configuration>
 				<executions>
-					<!-- Dont clean so process-resources works without needing to download appKeys every time
 					<execution>
 						<id>auto-clean-init</id>
 						<phase>initialize</phase>
 						<goals>
 							<goal>clean</goal>
 						</goals>
-					</execution>
-					-->
-					<!-- leave the target dir for debugging, post mortem -->
-					<!-- 
+					</execution> 
 					<execution>
 						<id>auto-clean-install</id>
 						<phase>install</phase>
@@ -476,7 +421,6 @@
 							<goal>clean</goal>
 						</goals>
 					</execution>
-					-->
 				</executions>
 			</plugin>
 		</plugins>
