@@ -106,14 +106,18 @@ mvn -Ptest apigee-config:apiproducts -Dapigee.config.options=update
 mvn -Ptest apigee-config:kvms -Dapigee.config.options=update
 mvn -Ptest apigee-config:exportAppKeys -Dapigee.config.exportDir=./appkeys
 
-## Bottom lines
-
 ### Initially, all at once using resources dir, export app keys, run integration tests
 Replacer copies and replaces the resources dir into the target. Note use of -Dapigee.config.dir and -Dapigee.config.exportDir options.
-* mvn -P training-test install -Ddeployment.suffix= -Dapigee.config.options=update -Dapigee.config.dir=target/resources/edge -Dapigee.config.exportDir=target/test/integration -Dapi.testtag=@intg
+* mvn -P fm-dev install -Ddeployment.suffix= -Dapigee.config.options=update -Dapigee.config.dir=target/resources/edge -Dapigee.config.exportDir=target/test/integration -Dapi.testtag=@intg
 
 ### Subsequently, run process-resources and run tests
-* mvn -Ptraining-test process-resources -Ddeployment.suffix= apigee-config:exportAppKeys -Dapigee.config.dir=target/resources/edge -Dapigee.config.exportDir=target/test/integration exec:exec@integration -Dapi.testtag=@intg,@errors
+This exports App Keys to target/test/integration/devAppKeys.json
+* mvn -P fm-dev process-resources -Ddeployment.suffix= apigee-config:exportAppKeys -Dapigee.config.dir=target/resources/edge -Dapigee.config.exportDir=target/test/integration exec:exec@integration -Dapi.testtag=@intg,@errors
 
-#### Run tests after process-resources
+#### Process new tests and run without exporting App Keys
+This just processes new tests in test, doesn't clean target and allows use of existing App Keys in target/test/integration/devAppKeys.json.
+Note use of -Dskip.clean=true. 
+
+* mvn -P fm-dev process-resources -Ddeployment.suffix= -Dskip.clean=true exec:exec@integration -Dapi.testtag=@health
+
 * node ./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags @errors

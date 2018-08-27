@@ -439,7 +439,9 @@
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>2.5</version>
-
+				<configuration>
+					<skip>${skip.clean}</skip>
+				</configuration>
 				<executions>
 					<execution>
 						<id>auto-clean-init</id>
@@ -447,9 +449,7 @@
 						<goals>
 							<goal>clean</goal>
 						</goals>
-					</execution>
-					<!-- leave the target dir for debugging, post mortem -->
-					<!--
+					</execution> 
 					<execution>
 						<id>auto-clean-install</id>
 						<phase>install</phase>
@@ -457,7 +457,6 @@
 							<goal>clean</goal>
 						</goals>
 					</execution>
-					-->
 				</executions>
 			</plugin>
 		</plugins>
