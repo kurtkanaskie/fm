@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-GetStatus">
+    <DisplayName>SC-GetStatus</DisplayName>
+    <Request>
+        <Set>
+            <Headers>
+                <Header name="Authorization">OK to be invalid</Header>
+            </Headers>
+        </Set>
+    </Request>
+    <Response>statusResponse</Response>
+    <HTTPTargetConnection>
+        <Properties>
+            <Property name="success.codes">1xx,2xx,3xx,4xx</Property>
+        </Properties>
+        <!-- Use this to simulate target server not available -->
+        <!--
+        <URL>https://mocktarget.apigee.net/statuscode/503</URL>
+        -->
+        <URL>https://{tam_url}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

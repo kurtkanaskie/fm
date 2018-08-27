@@ -59,6 +59,44 @@
             </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/token") and (request.verb = "POST")</Condition>
         </Flow>
+        <Flow name="ping">
+            <Description>API proxy monitoring response</Description>
+            <Request>
+                <Step>
+                    <Name>VAK-HeaderXAPIKey</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>FC-APIMonitoring</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/ping") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="status">
+            <Description>API backend monitoring response</Description>
+            <Request>
+                <Step>
+                    <Name>VAK-HeaderXAPIKey</Name>
+                </Step>
+                <Step>
+                    <Name>KV-Configuration</Name>
+                </Step>
+                <Step>
+                    <Name>SC-GetStatus</Name>
+                </Step>
+                <Step>
+                    <Condition>statusResponse.status.code == 401</Condition>
+                    <Name>AM-SetStatusResponseVariable</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>FC-APIMonitoring</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
+        </Flow>
         <Flow name="UnknownRequest">
             <Request>
                 <Step>

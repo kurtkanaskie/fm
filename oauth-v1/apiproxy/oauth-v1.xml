@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="21" name="OAUTH-V1">
+<APIProxy revision="10" name="oauth-v1">
     <Basepaths>/oauth-v1</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1532008887272</CreatedAt>
-    <CreatedBy>dhundi_acharya@freddiemac.com</CreatedBy>
-    <Description>Working properly with error handler, added error handler for Unathorized and Account Locked</Description>
-    <DisplayName>OAUTH-V1</DisplayName>
-    <LastModifiedAt>1534787087615</LastModifiedAt>
-    <LastModifiedBy>dhundi_acharya@freddiemac.com</LastModifiedBy>
-    <ManifestVersion>SHA-512:e7ba54bba7df2a3e50de609cfffb4fab0e1c34cb2386f22c3eaf29d4200a943b29ee743662f3c88a275798ae3c45cf59686109cf9ee2a4f0d285cd926cd30f78</ManifestVersion>
+    <CreatedAt>1534937309457</CreatedAt>
+    <CreatedBy>kurtkanaskie@google.com</CreatedBy>
+    <Description>Changes by Kurt to add ping and status, using SC with 4xx as success and 5xx as fault</Description>
+    <DisplayName>oauth-v1</DisplayName>
+    <LastModifiedAt>1535397347949</LastModifiedAt>
+    <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:8781eed9aac7e96e25dd904cd7a0fb7d3d5801677780357ee23ba7c260937c8b214c8c8d2a34b1bb2c3c7d70d5d3172812965516a4b3474b10b4778e0b6b74e3</ManifestVersion>
     <Policies>
         <Policy>AM-SetContent-Type</Policy>
+        <Policy>AM-SetStatusResponseVariable</Policy>
         <Policy>BA-ApplyBasicAuthHeader</Policy>
+        <Policy>FC-APIMonitoring</Policy>
         <Policy>FC-DefaultErrorMessage</Policy>
         <Policy>JSON-to-XML</Policy>
-        <Policy>KV-oauth-v1</Policy>
+        <Policy>KV-Configuration</Policy>
         <Policy>OA-GenerateAccessToken</Policy>
         <Policy>RF-AccountLocked</Policy>
         <Policy>RF-InvalidCredentials</Policy>
+        <Policy>RF-OAuthFailed</Policy>
         <Policy>RF-path-suffix-not-found</Policy>
+        <Policy>SC-GetStatus</Policy>
         <Policy>SC-TAMCallout</Policy>
+        <Policy>VAK-HeaderXAPIKey</Policy>
         <Policy>VAK-Verify Client ID</Policy>
     </Policies>
     <ProxyEndpoints>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ServiceCallout async="false" continueOnError="true" enabled="true" name="SC-TAMCallout">
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-TAMCallout">
     <DisplayName>SC-TAMCallout</DisplayName>
     <Properties/>
     <Request>
@@ -11,7 +11,10 @@
     </Request>
     <Response>calloutResponse</Response>
     <HTTPTargetConnection>
-        <Properties/>
+        <Properties>
+            <Property name="success.codes">1xx,2xx,3xx,4xx</Property>
+        </Properties>
+        <!--<URL>https://mocktarget.apigee.net/statuscode/503</URL>-->
         <URL>https://{tam_url}</URL>
     </HTTPTargetConnection>
 </ServiceCallout>
