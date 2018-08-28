@@ -2,3 +2,4 @@ node_modules
 target
 *.zip
 manifest.xml
+package-lock.json
