@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-BaseResponse">
+    <DisplayName>AM-BaseResponse</DisplayName>
+    <Set>
+        <Payload contentType="application/json">
+    "organization": "{organization.name}",
+    "environment": "{environment.name}",
+    "region":"{system.region.name}",
+    "pod":"{system.pod.name}",
+    "messageProcessor":"{system.uuid}",
+    "client_id": "{apigee.client_id}",
+    "application": "{developer.app.name}",
+    "product": "{apigee.apiproduct.name}",
+    "apiproxy": "{apiproxy.name}",
+    "basepath": "{proxy.basepath}",
+    "suffix": "{proxy.pathsuffix}",
+    "client": "{client.host}",
+    "time": "{system.time}",
+    "latency": {total_request_time}
+</Payload>
+        <StatusCode>200</StatusCode>
+    </Set>
+    <AssignTo>base_response</AssignTo>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

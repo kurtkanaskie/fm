@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<XMLThreatProtection async="false" continueOnError="false" enabled="true" name="XML-Threat_Protection">
+    <DisplayName>XML-Threat_Protection</DisplayName>
+    <Properties/>
+    <NameLimits>
+        <Element>1000</Element>
+        <Attribute>100</Attribute>
+        <NamespacePrefix>1000</NamespacePrefix>
+        <ProcessingInstructionTarget>100</ProcessingInstructionTarget>
+    </NameLimits>
+    <Source>request</Source>
+    <StructureLimits>
+        <NodeDepth>50</NodeDepth>
+        <AttributeCountPerElement>20</AttributeCountPerElement>
+        <NamespaceCountPerElement>30</NamespaceCountPerElement>
+        <ChildCount includeComment="true" includeElement="true" includeProcessingInstruction="true" includeText="true">3000</ChildCount>
+    </StructureLimits>
+    <ValueLimits>
+        <Text>1500</Text>
+        <Attribute>900</Attribute>
+        <NamespaceURI>5000</NamespaceURI>
+        <Comment>1000</Comment>
+        <ProcessingInstructionData>1000</ProcessingInstructionData>
+    </ValueLimits>
+</XMLThreatProtection>

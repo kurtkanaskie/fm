@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota name="Quota">
+    <!-- Count across all MPs -->
+    <Distributed>true</Distributed>
+    <!-- Sync count across all MPs, most accurate but may introduce performance -->
+    <Synchronous>true</Synchronous>
+    <!-- Count per client_id per product -->
+    <Identifier ref="apigee.client_id"/>
+    <Interval ref="apiproduct.developer.quota.interval"/>
+    <TimeUnit ref="apiproduct.developer.quota.timeunit"/>
+    <Allow countRef="apiproduct.developer.quota.limit"/>
+</Quota>

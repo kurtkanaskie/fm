@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-PingResponse">
+    <DisplayName>AM-PingResponse</DisplayName>
+    <Set>
+        <Payload contentType="application/json">
+{
+    {base_response.content},
+    "message":"PONG"
+}
+</Payload>
+        <StatusCode>200</StatusCode>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="3" name="APIMonitoring">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1535378094499</CreatedAt>
+    <CreatedBy>kurtkanaskie@google.com</CreatedBy>
+    <Description>Set the standard ping and status responses for API proxy monitoring - attach to proxy response flow for GET /ping and GET /status. Expects to use variables set via OAuth validation. For GET /status expects "backend_status_message" variable to be set as a JSON structure.</Description>
+    <DisplayName>PingResponse</DisplayName>
+    <LastModifiedAt>1535381949759</LastModifiedAt>
+    <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:4e3cf54842156dd910274b9474ebdd945def2828279216ec9fa311a5e85ec7f3ff0a2f2e7a46a8c427d4551d7931b94e052f2ee68a05c06cc9d14a99649a2700</ManifestVersion>
+    <Policies>
+        <Policy>AM-BaseResponse</Policy>
+        <Policy>AM-PingResponse</Policy>
+        <Policy>AM-StatusResponse</Policy>
+        <Policy>JS-SetTimeData</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://JS-SetTimeData.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

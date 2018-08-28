@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>JS-SetTimeData</Name>
+    </Step>
+    <Step>
+        <Name>AM-BaseResponse</Name>
+    </Step>
+    <Step>
+        <Name>AM-PingResponse</Name>
+        <Condition>(proxy.pathsuffix MatchesPath "/ping") and (request.verb = "GET")</Condition>
+    </Step>
+    <Step>
+        <Name>AM-StatusResponse</Name>
+        <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
+    </Step>
+</SharedFlow>

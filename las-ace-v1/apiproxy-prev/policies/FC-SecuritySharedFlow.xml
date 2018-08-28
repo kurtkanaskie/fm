@@ -3,5 +3,5 @@
     <DisplayName>FC-SecuritySharedFlow</DisplayName>
     <FaultRules/>
     <Properties/>
-    <SharedFlowBundle>proxy-security-v1</SharedFlowBundle>
+    <SharedFlowBundle>ProxySecurity</SharedFlowBundle>
 </FlowCallout>

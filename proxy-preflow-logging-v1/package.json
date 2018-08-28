@@ -1,0 +1,31 @@
+{
+	"name": "sf-token-validation-v1",
+	"repository": "sf-token-validation-v1",
+	"version": "1.0.0",
+	"license": "MIT",
+	"devDependencies": {
+		"jshint": "^2.9.5",
+		"apickli": "^1.7.0",
+		"cucumber": "^1.0.0",
+		"prettyjson": "^1.1.3",
+		"bluebird": "^3.3.5",
+		"chai": "^3",
+		"chai-fuzzy": "^1",
+		"mocha": "^2",
+		"sinon": "^1"
+	},
+	"jshintConfig": {
+		"predef": [
+			"console",
+			"context"
+		],
+		"curly": true,
+		"eqeqeq": true,
+		"forin": true,
+		"undef": true,
+		"latedef": true,
+		"noempty": true,
+		"nonew": true,
+		"unused": true
+	}
+}

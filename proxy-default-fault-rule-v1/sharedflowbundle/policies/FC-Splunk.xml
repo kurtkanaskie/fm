@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-CommonApigeeLoggerPostFlow">
-    <DisplayName>FC-CommonApigeeLoggerPostFlow</DisplayName>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-Splunk">
+    <DisplayName>FC-Splunk</DisplayName>
     <FaultRules/>
     <Properties/>
     <SharedFlowBundle>proxy-postflow-logging-v1</SharedFlowBundle>

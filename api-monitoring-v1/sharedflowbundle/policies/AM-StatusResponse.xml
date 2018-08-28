@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-StatusResponse">
+    <DisplayName>AM-StatusResponse</DisplayName>
+    <DisplayName>AM-CreatePingResponse</DisplayName>
+    <!-- Can we do this in the same policy? -->
+    <AssignVariable>
+        <Name>backend_status_message</Name>
+        <Value>{"message":"Default backend response"}</Value>
+        <Ref>backend_status_message</Ref>
+    </AssignVariable>
+    <Set>
+        <Payload contentType="application/json">
+{
+    {base_response.content},
+    "proxyLatency": {total_client_time},
+    "targetLatency": {total_target_time},
+    "message":"STATUS",
+    "backendMessage":{backend_status_message}
+}
+</Payload>
+        <StatusCode>200</StatusCode>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

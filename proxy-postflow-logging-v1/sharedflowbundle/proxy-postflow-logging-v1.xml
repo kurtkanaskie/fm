@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="17" name="ProxyPostFlowLog">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1533917749554</CreatedAt>
+    <CreatedBy>kurtkanaskie@google.com</CreatedBy>
+    <Description>Set logging values and log to splunk</Description>
+    <DisplayName>PorxyPostFlowLog</DisplayName>
+    <LastModifiedAt>1534963989230</LastModifiedAt>
+    <LastModifiedBy>dhundi_acharya@freddiemac.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:56e13bf75441f26ad40ff140d9055a102167059e10727069e683b1562b61baa0b46e3d004b94e21a9bd18b0c591725d5098257ea60271954baec366c6d55310e</ManifestVersion>
+    <Policies>
+        <Policy>JS-Splunk</Policy>
+        <Policy>KV-SplunkVariables</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://SplunkLogger.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

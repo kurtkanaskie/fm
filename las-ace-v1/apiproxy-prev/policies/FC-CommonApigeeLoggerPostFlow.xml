@@ -3,5 +3,5 @@
     <DisplayName>FC-CommonApigeeLoggerPostFlow</DisplayName>
     <FaultRules/>
     <Properties/>
-    <SharedFlowBundle>proxy-postflow-logging-v1</SharedFlowBundle>
+    <SharedFlowBundle>ProxyPostFlowLog</SharedFlowBundle>
 </FlowCallout>

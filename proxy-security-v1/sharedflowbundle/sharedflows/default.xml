@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Name>OA-VerifyAccessToken</Name>
+    </Step>
+    <Step>
+        <Name>SpikeArrest</Name>
+    </Step>
+    <Step>
+        <Name>Quota</Name>
+    </Step>
+    <Step>
+        <Name>AM-RemoveOAuthHeader</Name>
+    </Step>
+    <Step>
+        <Condition>(request.verb == "POST") OR (request.verb == "PUT") OR (request.verb == "PATCH") AND (request.header.content-type != "application/json") AND (request.header.content-type != "application/xml")</Condition>
+        <Name>RF-MissingHeaderContentType</Name>
+    </Step>
+    <Step>
+        <Condition>(request.header.Content-Type == "application/json")</Condition>
+        <Name>JT-Threat_Protection</Name>
+    </Step>
+    <Step>
+        <Condition>(request.header.Content-Type == "application/xml")</Condition>
+        <Name>XML-Threat_Protection</Name>
+    </Step>
+</SharedFlow>

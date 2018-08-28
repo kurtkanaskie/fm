@@ -117,7 +117,5 @@ This exports App Keys to target/test/integration/devAppKeys.json
 #### Process new tests and run without exporting App Keys
 This just processes new tests in test, doesn't clean target and allows use of existing App Keys in target/test/integration/devAppKeys.json.
 Note use of -Dskip.clean=true. 
-
 * mvn -P fm-dev process-resources -Ddeployment.suffix= -Dskip.clean=true exec:exec@integration -Dapi.testtag=@health
-
 * node ./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags @errors

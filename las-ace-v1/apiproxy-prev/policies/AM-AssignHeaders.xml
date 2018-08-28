@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage enabled="true" continueOnError="true" async="false" name="AM-AssignHeaders" type="request">
+    <Set>
+        <Headers>
+            <Header name="X-Forwarded-ProxyMessageId">{messageid}</Header>
+            <Header name="X-Forwarded-UserName">{accesstoken.UserName}</Header>
+        </Headers>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <DisplayName>AM-AssignHeaders</DisplayName>
+</AssignMessage>

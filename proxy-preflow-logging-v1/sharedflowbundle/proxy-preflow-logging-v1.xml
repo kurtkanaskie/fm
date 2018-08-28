@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="9" name="ProxyPreFlowLoggingValues">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1534982113715</CreatedAt>
+    <CreatedBy>dhundi_acharya@freddiemac.com</CreatedBy>
+    <Description>Set the logging values at the proxy pre flow</Description>
+    <DisplayName>ProxyPreFlowLoggingValues</DisplayName>
+    <LastModifiedAt>1534982113715</LastModifiedAt>
+    <LastModifiedBy>dhundi_acharya@freddiemac.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:0b1e6aa3c48f47673d9b4688d82050391cc3407ab0786ea8ef09655753a450671e010831e6d9a418eafd0e89daa483448c719033fefb446ae79bbd53d14349f8</ManifestVersion>
+    <Policies>
+        <Policy>JS-SetVariables</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://AssignVariable.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

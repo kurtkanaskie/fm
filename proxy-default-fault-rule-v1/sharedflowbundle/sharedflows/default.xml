@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlow name="default">
+    <Step>
+        <Condition>(fault.name != null)</Condition>
+        <Name>JS-proxy-fault-rules</Name>
+    </Step>
+    <Step>
+        <Condition>(fm.error.code == null) || (fm.error.code == undefined)</Condition>
+        <Name>AM-SetUnknownErrorVars</Name>
+    </Step>
+    <Step>
+        <Condition>(fault.name != null)</Condition>
+        <Name>AM-SetStandardErrorResponse</Name>
+    </Step>
+    <Step>
+        <Name>FC-Splunk</Name>
+    </Step>
+    <Step>
+        <Condition>(request.header.accept == "application/xml") or (request.header.Content-Type == "application/xml")</Condition>
+        <Name>JSON-to-XML</Name>
+    </Step>
+    <Step>
+        <Condition>(request.header.accept == "application/xml") or (request.header.Content-Type == "application/xml")</Condition>
+        <Name>AM-SetContent-Type</Name>
+    </Step>
+</SharedFlow>

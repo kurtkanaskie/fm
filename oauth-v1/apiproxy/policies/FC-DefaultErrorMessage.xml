@@ -3,5 +3,5 @@
     <DisplayName>FC-DefaultErrorMessage</DisplayName>
     <FaultRules/>
     <Properties/>
-    <SharedFlowBundle>DefaultErrorMessage</SharedFlowBundle>
+    <SharedFlowBundle>proxy-default-fault-rule-v1</SharedFlowBundle>
 </FlowCallout>

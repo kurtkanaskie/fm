@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetStandardErrorResponse">
+    <DisplayName>AM-set-standard-error-response</DisplayName>
+    <Set>
+        <Headers>
+            <Header name="Content-Type">application/json</Header>
+        </Headers>
+        <Payload contentType="application/json">
+{
+"code": "{fm.error.code}" ,
+"message": "{fm.error.description}" ,
+"details": {fm.error.detailsarray}
+} 
+</Payload>
+        <StatusCode>{fm.error.status}</StatusCode>
+        <ReasonPhrase>{fm.error.reason}</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

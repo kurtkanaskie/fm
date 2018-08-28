@@ -3,5 +3,5 @@
     <DisplayName>FC-CommonApigeeLogger</DisplayName>
     <FaultRules/>
     <Properties/>
-    <SharedFlowBundle>proxy-preflow-logging-v1</SharedFlowBundle>
+    <SharedFlowBundle>ProxyPreFlowLoggingValues</SharedFlowBundle>
 </FlowCallout>

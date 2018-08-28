@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="3" name="DefaultErrorMessage">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1534941084021</CreatedAt>
+    <CreatedBy>kurtkanaskie@google.com</CreatedBy>
+    <Description>Kurt working on target errors. Set the default error message to either JSON or XML</Description>
+    <DisplayName>DefaultErrorMessage</DisplayName>
+    <LastModifiedAt>1535468435626</LastModifiedAt>
+    <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:953b544f94add484a0c32dc2d2574b82683301dfb231f771a9620a952996ff0946b6b446aad68951376ea3083177c83c37bd76f8ee419bda3e53d1aaf540fe54</ManifestVersion>
+    <Policies>
+        <Policy>AM-SetContent-Type</Policy>
+        <Policy>AM-SetStandardErrorResponse</Policy>
+        <Policy>AM-SetUnknownErrorVars</Policy>
+        <Policy>FC-Splunk</Policy>
+        <Policy>JS-proxy-fault-rules</Policy>
+        <Policy>JSON-to-XML</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://JS-proxy-fault-rules.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

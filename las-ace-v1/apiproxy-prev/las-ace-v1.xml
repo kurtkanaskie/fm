@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="52" name="Loan-Advisor-Suite-ACE-REST-API">
+    <Basepaths>/loan-advisor-suite-ace-rest-api</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1531843571075</CreatedAt>
+    <CreatedBy>alejandro_donate@freddiemac.com</CreatedBy>
+    <Description>"REST API for LAS ACE Offering" - Changes by Kurt for GET /status, AM-CleanResponse, AM-SetPathSuffix...</Description>
+    <DisplayName>Loan-Advisor-Suite-ACE-REST-API</DisplayName>
+    <LastModifiedAt>1534868054020</LastModifiedAt>
+    <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:41070470538bfd3d8de2e55d468a38400789fda35a6969427d78eaac37a618e1f333c6c2b5e5847cce61f0ae1117fb7958ea28235110a0c42a256001d6e1152f</ManifestVersion>
+    <Policies>
+        <Policy>AM-AssignHeaders</Policy>
+        <Policy>AM-CleanResponse</Policy>
+        <Policy>AM-SetPathSuffixDecisions</Policy>
+        <Policy>AM-SetPathSuffixStatus</Policy>
+        <Policy>FC-CommonApigeeLogger</Policy>
+        <Policy>FC-CommonApigeeLoggerPostFlow</Policy>
+        <Policy>FC-DefaultErrorMessage</Policy>
+        <Policy>FC-SecuritySharedFlow</Policy>
+        <Policy>JS-ValidateRequest</Policy>
+        <Policy>KV-TargetConfiguration</Policy>
+        <Policy>RF-path-suffix-not-found</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>openapi://association.json</Resource>
+        <Resource>jsc://JSONValidator.js</Resource>
+        <Resource>jsc://oas.js</Resource>
+        <Resource>jsc://tv4-min.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

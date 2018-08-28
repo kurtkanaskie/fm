@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <DefaultFaultRule name="all">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>FC-DefaultErrorMessage</Name>
+        </Step>
+    </DefaultFaultRule>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>FC-CommonApigeeLogger</Name>
+            </Step>
+            <Step>
+                <Name>FC-SecuritySharedFlow</Name>
+            </Step>
+            <Step>
+                <Name>KV-TargetConfiguration</Name>
+            </Step>
+        </Request>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>AM-CleanResponse</Name>
+            </Step>
+            <Step>
+                <Name>FC-CommonApigeeLoggerPostFlow</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="getDecisionUsingPOST">
+            <Description>Verify if a Property is Freddie Mac ACE Eligible</Description>
+            <Request>
+                <Step>
+                    <Name>JS-ValidateRequest</Name>
+                </Step>
+                <Step>
+                    <Name>AM-AssignHeaders</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/ace/evaluation") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="handleUsingGET">
+            <Description>handle</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="UnknownRequest">
+            <Request>
+                <Step>
+                    <Name>RF-path-suffix-not-found</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/las-ace/v1</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

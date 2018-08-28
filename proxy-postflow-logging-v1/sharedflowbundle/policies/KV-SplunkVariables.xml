@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations mapIdentifier="ProxyFlowLog" continueOnError="false" enabled="true" name="KV-SplunkVariables">
+    <DisplayName>KV-SplunkVariables</DisplayName>
+    <Properties/>
+    <!-- 1 hour -->
+    <ExpiryTimeInSecs>3600</ExpiryTimeInSecs>
+    <Get assignTo="logging_url">
+        <Key>
+            <Parameter>logging_url</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="authorization_credentials">
+        <Key>
+            <Parameter>authorization_credentials</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

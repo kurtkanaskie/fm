@@ -3,5 +3,5 @@
     <DisplayName>FC-APIMonitoring</DisplayName>
     <FaultRules/>
     <Properties/>
-    <SharedFlowBundle>APIMonitoring</SharedFlowBundle>
+    <SharedFlowBundle>api-monitoring-v1</SharedFlowBundle>
 </FlowCallout>
