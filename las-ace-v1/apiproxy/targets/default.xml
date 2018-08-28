@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <TargetEndpoint name="default">
     <Description/>
-    <FaultRules/>
+    <DefaultFaultRule name="all">
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>AM-TargetDefaultErrorMessage</Name>
+        </Step>
+    </DefaultFaultRule>
+    <FaultRules>
+        <FaultRule name="404 to 500">
+            <Condition>(error.status.code == 404)</Condition>
+            <Step>
+                <Name>AM-SetTargetErrorVariables-404</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
     <PreFlow name="PreFlow">
         <Request/>
         <Response/>
     </PreFlow>
     <PostFlow name="PostFlow">
         <Request/>
-        <Response>
-        </Response>
+        <Response/>
     </PostFlow>
     <Flows>
         <Flow name="getDecisionUsingPOST">
@@ -29,7 +41,11 @@
                     <Name>AM-SetPathSuffixActuatorHealth</Name>
                 </Step>
             </Request>
-            <Response/>
+            <Response>
+                <Step>
+                    <Name>AM-SetStatusResponseVariable</Name>
+                </Step>
+            </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
         </Flow>
     </Flows>

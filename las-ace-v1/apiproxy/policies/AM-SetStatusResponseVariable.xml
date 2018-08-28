@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetStatusResponseVariable">
+    <DisplayName>AM-SetStatusResponseVariable</DisplayName>
+    <AssignVariable>
+        <Name>backend_status_message</Name>
+        <Value>{"message":"No backend response"}</Value>
+        <Ref>response.content</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

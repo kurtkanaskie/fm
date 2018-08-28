@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-SetTargetErrorVariables-404">
+    <DisplayName>AM-SetTargetErrorVariables-404</DisplayName>
+    <AssignVariable>
+        <Name>fm.target.error.status</Name>
+        <Value>500</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.reason</Name>
+        <Value>Internal Error</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.code</Name>
+        <Value>500.404</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.description</Name>
+        <Value>Target resource not found</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.details</Name>
+        <Value>Target resource not available for user.</Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

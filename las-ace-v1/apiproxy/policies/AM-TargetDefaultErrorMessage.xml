@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-TargetDefaultErrorMessage">
+    <DisplayName>AM-TargetDefaultErrorMessage</DisplayName>
+    <AssignVariable>
+        <Name>fm.target.error.status</Name>
+        <Value>500</Value>
+        <Ref>fm.target.error.status</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.reason</Name>
+        <Value>Internal Server Error</Value>
+        <Ref>fm.target.error.reason</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.code</Name>
+        <Value>500.000</Value>
+        <Ref>fm.target.error.code</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.description</Name>
+        <Value>Internal Server Error - Uncaught</Value>
+        <Ref>fm.target.error.description</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>fm.target.error.arraydetails</Name>
+        <Value>Uncaught internal error condition</Value>
+        <Ref>fm.target.error.details</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</AssignMessage>

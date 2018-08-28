@@ -46,10 +46,24 @@
             <Response/>
             <Condition>(proxy.pathsuffix MatchesPath "/ace/evaluation") and (request.verb = "POST")</Condition>
         </Flow>
+        <Flow name="ping">
+            <Description>API proxy monitoring response</Description>
+            <Request/>
+            <Response>
+                <Step>
+                    <Name>FC-APIMonitoring</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/ping") and (request.verb = "GET")</Condition>
+        </Flow>
         <Flow name="handleUsingGET">
             <Description>handle</Description>
             <Request/>
-            <Response/>
+            <Response>
+                <Step>
+                    <Name>FC-APIMonitoring</Name>
+                </Step>
+            </Response>
             <Condition>(proxy.pathsuffix MatchesPath "/status") and (request.verb = "GET")</Condition>
         </Flow>
         <Flow name="UnknownRequest">
@@ -66,6 +80,9 @@
         <Properties/>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
+    <RouteRule name="ping">
+        <Condition>(proxy.pathsuffix MatchesPath "/ping")</Condition>
+    </RouteRule>
     <RouteRule name="default">
         <TargetEndpoint>default</TargetEndpoint>
     </RouteRule>
