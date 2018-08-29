@@ -4,7 +4,7 @@
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1534975199570</CreatedAt>
     <CreatedBy>kurtkanaskie@google.com</CreatedBy>
-    <Description>"REST API for LAS ACE Offering" - Changes by Kurt for TargetErrors, Changes by Kurt for GET /status, AM-CleanResponse, AM-SetPathSuffix...</Description>
+    <Description>Working on coordinated build with master pom - @description</Description>
     <DisplayName>Loan-Advisor-Suite-ACE-REST-API</DisplayName>
     <LastModifiedAt>1535394056249</LastModifiedAt>
     <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>

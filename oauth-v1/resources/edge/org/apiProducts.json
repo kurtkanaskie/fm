@@ -8,6 +8,10 @@
         "approvalType": "auto",
         "attributes": [
             {
+                "name": "access",
+                "value": "internal"
+            },
+            {
                 "name": "custom.description",
                 "value": "Product to test oauth-v1 API for APIGEE_ENVIRONMENT env"
             }

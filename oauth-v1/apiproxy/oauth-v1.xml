@@ -4,7 +4,7 @@
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1534937309457</CreatedAt>
     <CreatedBy>kurtkanaskie@google.com</CreatedBy>
-    <Description>Changes by Kurt to add ping and status, using SC with 4xx as success and 5xx as fault</Description>
+    <Description>Working on coordinated build with master pom - @description</Description>
     <DisplayName>oauth-v1</DisplayName>
     <LastModifiedAt>1535397347949</LastModifiedAt>
     <LastModifiedBy>kurtkanaskie@google.com</LastModifiedBy>

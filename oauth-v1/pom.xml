@@ -49,7 +49,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>single-family-non-prod-dev.apigee.net</api.northbound.domain>
-				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
+				<api.testtag>@intg,@health,@errors,@wip,@mock</api.testtag>
 				<userUsername>baofam_lasapisys2sys</userUsername>
 				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
 			</properties>
@@ -65,7 +65,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>single-family-non-prod-sit.apigee.net</api.northbound.domain>
-				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
+				<api.testtag>@intg,@health,@errors</api.testtag>
 				<userUsername>baofam_lasapisys2sys</userUsername>
 				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
 			</properties>
@@ -81,7 +81,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>kurtkanaskietrainer-trial-test.apigee.net</api.northbound.domain>
-				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
+				<api.testtag>@intg,@health,@errors,@wip,@mock</api.testtag>
 				<userUsername>baofam_lasapisys2sys</userUsername>
 				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
 			</properties>
@@ -97,7 +97,7 @@
 				<apigee.username>${env.APIGEE_USERNAME}</apigee.username>
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>kurtkanaskietrainer-trial-prod.apigee.net</api.northbound.domain>
-				<api.testtag>~@health</api.testtag>
+				<api.testtag>@intg,@health,@errors</api.testtag>
 				<userUsername>baofam_lasapisys2sys</userUsername>
 				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
 			</properties>
@@ -307,6 +307,10 @@
 					</execution>
 					<execution>
 						<id>export-config-app</id>
+						<configuration>
+							<skip>${skip.export}</skip>
+						</configuration>
+				
 						<phase>install</phase>
 						<goals>
 							<goal>exportAppKeys</goal>
@@ -374,7 +378,7 @@
 						<configuration>
 							<executable>node</executable>
 							<commandlineArgs>
-								./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags ${api.testtag}
+								./node_modules/cucumber/bin/cucumber.js ${target.root.dir}/test/integration/features --tags ${api.testtag}
 							</commandlineArgs>
 						</configuration>
 					</execution>

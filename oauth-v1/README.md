@@ -110,6 +110,8 @@ mvn -Ptest apigee-config:exportAppKeys -Dapigee.config.exportDir=./appkeys
 Replacer copies and replaces the resources dir into the target. Note use of -Dapigee.config.dir and -Dapigee.config.exportDir options.
 * mvn -P fm-dev install -Ddeployment.suffix= -Dapigee.config.options=update -Dapigee.config.dir=target/resources/edge -Dapigee.config.exportDir=target/test/integration -Dapi.testtag=@intg
 
+NOTE: omit -Dapi.testtag to run all tests
+
 ### Subsequently, run process-resources and run tests
 This exports App Keys to target/test/integration/devAppKeys.json
 * mvn -P fm-dev process-resources -Ddeployment.suffix= apigee-config:exportAppKeys -Dapigee.config.dir=target/resources/edge -Dapigee.config.exportDir=target/test/integration exec:exec@integration -Dapi.testtag=@intg,@errors
