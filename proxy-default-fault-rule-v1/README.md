@@ -16,7 +16,7 @@ mvn validate
 - mvn jshint:lint
 - mvn exec:exec@unit
 
-mvn -Pdev clean process-resources exec:exec@integration -Ddeployment.suffix= -Dapi.testtag=@intg
+mvn -P fm-dev clean process-resources exec:exec@integration -Ddeployment.suffix= -Dapi.testtag=@intg
 node ./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags @foobar-standard
 
-mvn install -Pdev -Ddeployment.suffix= 
+mvn -P fm-dev install

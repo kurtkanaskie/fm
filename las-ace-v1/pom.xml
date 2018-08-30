@@ -52,8 +52,8 @@
 				<api.testtag>@intg,@health,@wip,@mock</api.testtag>
 				<oauth.domain>single-family-non-prod-dev.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
-				<user.username>baofam_lasapisys2sys</user.username>
-				<user.password>FHz/5/4*NYS7RBiraQ/u</user.password>
+				<user.username>baofam_lasapisys2sys2</user.username>
+				<user.password>8BN*K/1FWDwEoONQ)S]f</user.password>
 			</properties>
 		</profile>
 		<profile>
@@ -70,8 +70,8 @@
 				<api.testtag>@intg,@health</api.testtag>
 				<oauth.domain>single-family-non-prod-sit.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
-				<user.username>baofam_lasapisys2sys</user.username>
-				<user.password>FHz/5/4*NYS7RBiraQ/u</user.password>
+				<user.username>baofam_lasapisys2sys2</user.username>
+				<user.password>8BN*K/1FWDwEoONQ)S]f</user.password>
 			</properties>
 		</profile>
 		<profile>
@@ -88,8 +88,8 @@
 				<api.testtag>@intg,@health,@wip,@mock</api.testtag>
 				<oauth.domain>kurtkanaskietrainer-trial-test.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
-				<user.username>baofam_lasapisys2sys</user.username>
-				<user.password>FHz/5/4*NYS7RBiraQ/u</user.password>
+				<user.username>baofam_lasapisys2sys2</user.username>
+				<user.password>8BN*K/1FWDwEoONQ)S]f</user.password>
 			</properties>
 		</profile>
 		<profile>
@@ -106,8 +106,8 @@
 				<api.testtag>@intg,@health</api.testtag>
 				<oauth.domain>kurtkanaskietrainer-trial-test.apigee.net</oauth.domain>
 				<oauth.basepath>/oauth/v1</oauth.basepath>
-				<user.username>baofam_lasapisys2sys</user.username>
-				<user.password>FHz/5/4*NYS7RBiraQ/u</user.password>
+				<user.username>baofam_lasapisys2sys2</user.username>
+				<user.password>8BN*K/1FWDwEoONQ)S]f</user.password>
 			</properties>
 		</profile>
 	</profiles>
