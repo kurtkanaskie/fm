@@ -1,0 +1,16 @@
+[
+    {
+        "name": "proxy-security-v1",
+        "encrypted": false,
+        "entry": [
+            {
+                "name": "las-ace-v1",
+                "value": "false"
+            },
+            {
+                "name": "oauth-v1",
+                "value": "false"
+            }
+        ]
+    }
+]
