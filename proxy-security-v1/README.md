@@ -16,7 +16,8 @@ mvn validate
 - mvn jshint:lint
 - mvn exec:exec@unit
 
-mvn -P fm-dev clean process-resources exec:exec@integration -Ddeployment.suffix= -Dapi.testtag=@intg
-node ./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags @foobar-standard
+- mvn -P fm-dev clean process-resources exec:exec@integration -Ddeployment.suffix= -Dapi.testtag=@intg
+- node ./node_modules/cucumber/bin/cucumber.js target/test/integration/features --tags @foobar-standard
 
-mvn -P fm-dev install
+- mvn -P fm-dev install
+- mvn -P fm-dev install -Dapigee.config.options=update -Dapigee.config.dir=target/resources/edge

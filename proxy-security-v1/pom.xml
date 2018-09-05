@@ -169,6 +169,7 @@
 									<directory>${project.root.dir}</directory>
 									<filtering>true</filtering>
 									<includes>
+										<include>resources/**</include>
 										<include>sharedflowbundle/**</include>
 										<include>test/integration/**</include>
 									</includes>
@@ -235,7 +236,7 @@
             <plugin>
                 <groupId>com.apigee.edge.config</groupId>
                 <artifactId>apigee-config-maven-plugin</artifactId>
-                <version>1.2</version>
+                <version>1.2.1</version>
                 <executions>
                     <execution>
                         <id>create-config-cache</id>
@@ -274,6 +275,9 @@
                     </execution>
                     <execution>
                         <id>create-config-app</id>
+                        <configuration>
+							<skip>${skip.export}</skip>
+						</configuration>
                         <phase>install</phase>                        
                         <goals>
                             <goal>apps</goal>

@@ -24,4 +24,7 @@
         <Condition>(request.header.Content-Type == "application/xml")</Condition>
         <Name>XML-Threat_Protection</Name>
     </Step>
+    <Step>
+        <Name>KV-GetGlobalProxySettings</Name>
+    </Step>
 </SharedFlow>
