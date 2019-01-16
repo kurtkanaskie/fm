@@ -71,8 +71,8 @@
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>single-family-non-prod-sit.apigee.net</api.northbound.domain>
 				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
-				<userUsername>baofam_lasapisys2sys</userUsername>
-				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
+				<userUsername>sample-username</userUsername>
+				<userPassword>sample-password</userPassword>
 			</properties>
 		</profile>
 		<profile>
@@ -89,8 +89,8 @@
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>kurtkanaskietrainer-trial-test.apigee.net</api.northbound.domain>
 				<api.testtag>~@intg,~@health,~@wip,~@mock</api.testtag>
-				<userUsername>baofam_lasapisys2sys</userUsername>
-				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
+				<userUsername>sample-username</userUsername>
+				<userPassword>sample-password</userPassword>
 			</properties>
 		</profile>
 		<profile>
@@ -107,8 +107,8 @@
 				<apigee.password>${env.APIGEE_PASSWORD}</apigee.password>
 				<api.northbound.domain>kurtkanaskietrainer-trial-prod.apigee.net</api.northbound.domain>
 				<api.testtag>~@health</api.testtag>
-				<userUsername>baofam_lasapisys2sys</userUsername>
-				<userPassword>FHz/5/4*NYS7RBiraQ/u</userPassword>
+				<userUsername>sample-username</userUsername>
+				<userPassword>sample-password</userPassword>
 			</properties>
 		</profile>
 	</profiles>
